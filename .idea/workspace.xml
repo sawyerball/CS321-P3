@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Test Line">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Added Methods to HashObject.java">
+      <change afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HashTableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinearProbing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
     </list>
@@ -53,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635356114116</updated>
       <workItem from="1635537181357" duration="888000" />
+      <workItem from="1635538608916" duration="4868000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -61,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635537383008</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Methods to HashObject.java">
+      <created>1635538800788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635538800788</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,9 +89,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test Line" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Line" />
+    <MESSAGE value="Added Methods to HashObject.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Methods to HashObject.java" />
   </component>
 </project>
