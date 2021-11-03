@@ -1,12 +1,12 @@
 public abstract class HashTable<T> {
     HashObject<T>[] Table;
-    int tableSize = 10;
-//    int tablePopulation;
+    int tableSize;
 
     /*
      *
      */
-    public HashTable() {
+    public HashTable(int size) {
+        tableSize = size;
         Table = new HashObject[tableSize];
     }
 

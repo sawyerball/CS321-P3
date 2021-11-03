@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Save 1">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Twin Prime Generator Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TwinPrimeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwinPrimeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearProbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearProbing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +66,7 @@
       <workItem from="1635537181357" duration="888000" />
       <workItem from="1635538608916" duration="5064000" />
       <workItem from="1635795320521" duration="2459000" />
+      <workItem from="1635902490513" duration="2331000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -87,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635543643011</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Twin Prime Generator Completed">
+      <created>1635902085570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635902085570</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Twin Prime Generator Tests">
+      <created>1635902134386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635902134386</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +125,8 @@
     <MESSAGE value="Test Line" />
     <MESSAGE value="Added Methods to HashObject.java" />
     <MESSAGE value="Save 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save 1" />
+    <MESSAGE value="Twin Prime Generator Completed" />
+    <MESSAGE value="Twin Prime Generator Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Twin Prime Generator Tests" />
   </component>
 </project>
