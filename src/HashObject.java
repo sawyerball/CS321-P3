@@ -2,7 +2,7 @@
  *
  */
 public class HashObject<T> {
-    private T key;
+    private T key;  //generic?
     private int frequencyCount;
     private int probeCount;
 
@@ -11,7 +11,7 @@ public class HashObject<T> {
      *
      */
     public HashObject(T passedInKey, int passedInFrequency, int passedInProbeCount) {
-        key = passedInKey;
+        key = passedInKey; //hashCode()?
         frequencyCount = passedInFrequency;
         probeCount = passedInProbeCount;
     }

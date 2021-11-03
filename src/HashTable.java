@@ -36,14 +36,14 @@ public abstract class HashTable<T> {
         int i = 0;
         int j = 0;
         while (i != tableSize) {
-//            j = HashFunction(key, i);
-//            if (Table[j] == null || DELETED) {
-//                Table[j] = key;
+            j = hashFunction(key, i);
+            if (Table[j] == null) { // || DELETED) {
+                Table[j] = (HashObject<T>) key;
 //                return j;
-//            }
-//            else {
-//                i++;
-//            }
+            }
+            else {
+                i++;
+            }
         }
         //deal with "hash table underflow" error
     }
@@ -51,18 +51,18 @@ public abstract class HashTable<T> {
     /*
      *
      */
-    public void HashDelete(int key) {
+    public void HashDelete(T key) {
         int i = 0;
         int j = 0;
         while (Table[i] != null || i != tableSize) {
-//            j = HashFunction(key, i);
-//            if (Table[j] == key) {
-//                Table[j] = DELETED;
+            j = hashFunction(key, i);
+            if (Table[j] == key) {
+                Table[j] = null;
 //                return j;
-//            }
-//            else {
-//                i++;
-//            }
+            }
+            else {
+                i++;
+            }
         }
         //deal with "k is not in the table" error
     }
@@ -70,10 +70,7 @@ public abstract class HashTable<T> {
     /*
      *
      */
-    public T HashFunction() {
-
-        return null;
-    }
+    public abstract int hashFunction(T key, int index);
 
     /*
      *

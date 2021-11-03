@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Twin Prime Generator Tests">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="More Save">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinearProbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearProbing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +25,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="206DOkVvolwMTZOgx3ZUe4OGfDw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Application.HashTableTest">
     <configuration name="HashObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -44,6 +55,7 @@
     <configuration name="HashTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashTableTest" />
       <module name="P3" />
+      <option name="PROGRAM_PARAMETERS" value="a a a" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -66,7 +78,8 @@
       <workItem from="1635537181357" duration="888000" />
       <workItem from="1635538608916" duration="5064000" />
       <workItem from="1635795320521" duration="2459000" />
-      <workItem from="1635902490513" duration="2331000" />
+      <workItem from="1635902490513" duration="4131000" />
+      <workItem from="1635957097933" duration="5345000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -103,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635902134386</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="More Save">
+      <created>1635906176917</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635906176917</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +147,7 @@
     <MESSAGE value="Save 1" />
     <MESSAGE value="Twin Prime Generator Completed" />
     <MESSAGE value="Twin Prime Generator Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Twin Prime Generator Tests" />
+    <MESSAGE value="More Save" />
+    <option name="LAST_COMMIT_MESSAGE" value="More Save" />
   </component>
 </project>
