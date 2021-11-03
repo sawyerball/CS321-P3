@@ -2,7 +2,7 @@
  *
  */
 public class HashObject<T> {
-    private T key;  //generic?
+    private T key;
     private int frequencyCount;
     private int probeCount;
 

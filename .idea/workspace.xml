@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Added TwinPrimeGenerator class - NEEDS ATTENTION">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="HashFunctions and Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinearProbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearProbing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635885234422</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="HashFunctions and Tests">
+      <created>1635977584387</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635977584387</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +150,7 @@
     <MESSAGE value="Save 1" />
     <MESSAGE value="Save 1 - Updated" />
     <MESSAGE value="Added TwinPrimeGenerator class - NEEDS ATTENTION" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TwinPrimeGenerator class - NEEDS ATTENTION" />
+    <MESSAGE value="HashFunctions and Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="HashFunctions and Tests" />
   </component>
 </project>

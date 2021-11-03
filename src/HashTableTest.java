@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class HashTableTest {
 
 
@@ -7,6 +9,8 @@ public class HashTableTest {
         int arg3;
         int twinPrime;
         double loadFactor;
+        HashObject addObj;
+        Random random;
         TwinPrimeGenerator twinPrimeGen = new TwinPrimeGenerator();
 
         //Parse through arguments and make sure the arguments are valid
@@ -49,6 +53,11 @@ public class HashTableTest {
         //Create both hash tables needed for testing
         LinearProbing<Integer> linearProbe = new LinearProbing<Integer>(twinPrime);
         DoubleHashing<Integer> doubleHash = new DoubleHashing<Integer>(twinPrime);
+
+        //Start creating HashObjects and inserting them into both hash tables
+        random = new Random();
+
+        addObj = new HashObject(random.nextInt(), 0, 0);
 
 
 
