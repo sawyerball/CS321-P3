@@ -1,6 +1,7 @@
 public abstract class HashTable<T> {
     HashObject<T>[] Table;
     int tableSize;
+    int tablePopulation = 0;
 
     /*
      *
@@ -13,64 +14,32 @@ public abstract class HashTable<T> {
     /*
      *
      */
-    public int HashSearch(T key) {
-        int i = 0;
-        int j = 0; //what is j?
-        while (Table[j] != null || i != tableSize ) {
-//            j = HashFunction(key, i);
-            if (Table[j] == key) {
-                return j;
-            }
-            else {
-                i++;
-            }
-        }
-
-        return 0; //return nil?
-    }
-
-    /*
-     *
-     */
-    public void HashInsert(T key) {
+    public int HashInsert(T key) {
         int i = 0;
         int j = 0;
         while (i != tableSize) {
             j = hashFunction(key, i);
             if (Table[j] == null) { // || DELETED) {
                 Table[j] = (HashObject<T>) key;
-//                return j;
+                tablePopulation++;
+                return i;
             }
             else {
                 i++;
             }
         }
-        //deal with "hash table underflow" error
+
+        System.err.println("HashTableUnderflow");
+        return -1;
     }
+
 
     /*
      *
      */
-    public void HashDelete(T key) {
-        int i = 0;
-        int j = 0;
-        while (Table[i] != null || i != tableSize) {
-            j = hashFunction(key, i);
-            if (Table[j] == key) {
-                Table[j] = null;
-//                return j;
-            }
-            else {
-                i++;
-            }
-        }
-        //deal with "k is not in the table" error
+    public double getLoadFactor() {
+        return ((double)tablePopulation/tableSize);
     }
-
-    /*
-     *
-     */
-    public abstract int hashFunction(T key, int index);
 
     /*
      *
@@ -82,7 +51,9 @@ public abstract class HashTable<T> {
         }
         return value;
     }
+
+    /*
+     *
+     */
+    public abstract int hashFunction(T key, int index);
 }
-
-
-

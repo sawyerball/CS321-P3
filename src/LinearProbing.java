@@ -1,11 +1,8 @@
 public class LinearProbing<T> extends HashTable<T>{
 
+    int alpha;
     public LinearProbing(int size) {
         super(size);
-
-        /*
-         *
-         */
     }
 
     /*

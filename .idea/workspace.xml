@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="More Save">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Added TwinPrimeGenerator class - NEEDS ATTENTION">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinearProbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearProbing.java" afterDir="false" />
@@ -42,7 +41,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Application.HashTableTest">
     <configuration name="HashObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -55,7 +53,14 @@
     <configuration name="HashTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashTableTest" />
       <module name="P3" />
-      <option name="PROGRAM_PARAMETERS" value="a a a" />
+      <option name="PROGRAM_PARAMETERS" value="1 1 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwinPrimeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TwinPrimeGenerator" />
+      <module name="P3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -63,6 +68,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HashTableTest" />
+        <item itemvalue="Application.TwinPrimeGenerator" />
         <item itemvalue="Application.HashObject" />
       </list>
     </recent_temporary>
@@ -77,9 +83,9 @@
       <updated>1635356114116</updated>
       <workItem from="1635537181357" duration="888000" />
       <workItem from="1635538608916" duration="5064000" />
-      <workItem from="1635795320521" duration="2459000" />
-      <workItem from="1635902490513" duration="4131000" />
-      <workItem from="1635957097933" duration="5345000" />
+      <workItem from="1635795320521" duration="6333000" />
+      <workItem from="1635885965322" duration="5000" />
+      <workItem from="1635886302590" duration="2707000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -102,28 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635543643011</updated>
     </task>
-    <task id="LOCAL-00004" summary="Twin Prime Generator Completed">
-      <created>1635902085570</created>
+    <task id="LOCAL-00004" summary="Save 1 - Updated">
+      <created>1635810147796</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1635902085570</updated>
+      <updated>1635810147796</updated>
     </task>
-    <task id="LOCAL-00005" summary="Twin Prime Generator Tests">
-      <created>1635902134386</created>
+    <task id="LOCAL-00005" summary="Added TwinPrimeGenerator class - NEEDS ATTENTION">
+      <created>1635885234422</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1635902134386</updated>
+      <updated>1635885234422</updated>
     </task>
-    <task id="LOCAL-00006" summary="More Save">
-      <created>1635906176917</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1635906176917</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,9 +144,8 @@
     <MESSAGE value="Test Line" />
     <MESSAGE value="Added Methods to HashObject.java" />
     <MESSAGE value="Save 1" />
-    <MESSAGE value="Twin Prime Generator Completed" />
-    <MESSAGE value="Twin Prime Generator Tests" />
-    <MESSAGE value="More Save" />
-    <option name="LAST_COMMIT_MESSAGE" value="More Save" />
+    <MESSAGE value="Save 1 - Updated" />
+    <MESSAGE value="Added TwinPrimeGenerator class - NEEDS ATTENTION" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TwinPrimeGenerator class - NEEDS ATTENTION" />
   </component>
 </project>
