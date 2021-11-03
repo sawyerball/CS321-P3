@@ -15,25 +15,56 @@ public abstract class HashTable<T> {
      */
     public int HashSearch(T key) {
         int i = 0;
-        while (Table[i] != null || i != tableSize ) {
-
+        int j = 0; //what is j?
+        while (Table[j] != null || i != tableSize ) {
+//            j = HashFunction(key, i);
+            if (Table[j] == key) {
+                return j;
+            }
+            else {
+                i++;
+            }
         }
 
-        return 0;
+        return 0; //return nil?
     }
 
     /*
      *
      */
-    public void HashInsert() {
-
+    public void HashInsert(T key) {
+        int i = 0;
+        int j = 0;
+        while (i != tableSize) {
+//            j = HashFunction(key, i);
+//            if (Table[j] == null || DELETED) {
+//                Table[j] = key;
+//                return j;
+//            }
+//            else {
+//                i++;
+//            }
+        }
+        //deal with "hash table underflow" error
     }
 
     /*
      *
      */
-    public void HashDelete() {
-
+    public void HashDelete(int key) {
+        int i = 0;
+        int j = 0;
+        while (Table[i] != null || i != tableSize) {
+//            j = HashFunction(key, i);
+//            if (Table[j] == key) {
+//                Table[j] = DELETED;
+//                return j;
+//            }
+//            else {
+//                i++;
+//            }
+        }
+        //deal with "k is not in the table" error
     }
 
     /*
