@@ -7,9 +7,9 @@ public class HashtableTest {
 
 
     public static void main(String[] args) {
-        int arg1 = -1;
-        Double arg2 = -1.0;
-        int arg3 = 0;
+        int inputType = -1;
+        Double loadFactor = -1.0;
+        int debugLevel = 0;     //default to 0
         int twinPrime;
         HashObject addObj;
         Random random;
@@ -18,18 +18,20 @@ public class HashtableTest {
 
         twinPrime = twinPrimeGen.twinPrimeGenerator(95500, 96000);
 
-        //Parse through arguments and make sure the arguments are valid
+        //Check if number of arguments is valid
         if (args.length < 2 || args.length > 3) {
             printUsage();
             System.exit(0);
         }
 
-        //If debug level is not specified, default to 0
+        //Parse through arguments and make sure the arguments are valid
+
+        //If arguments don't specify debugLevel
         if (args.length == 2) {
 
             try {
-                arg1 = Integer.parseInt(args[0]);
-                arg2 = Double.parseDouble(args[1]);
+                inputType = Integer.parseInt(args[0]);
+                loadFactor = Double.parseDouble(args[1]);
             } catch (NumberFormatException e) {
                 System.out.println("Input type, load factor, and debug level must be numbers.\n");
                 printUsage();
@@ -37,21 +39,21 @@ public class HashtableTest {
             }
         }
 
-        //If debug level is specified, parse it from arguments
+        //If arguments specify debugLevel
         if (args.length == 3) {
             try {
-                arg1 = Integer.parseInt(args[0]);
-                if (arg1 < 1 || arg1 > 3) {
+                inputType = Integer.parseInt(args[0]);
+                if (inputType < 1 || inputType > 3) {
                     printUsage();
                     System.exit(-1);
                 }
-                arg2 = Double.parseDouble(args[1]);
-                if (arg2 < 0 || arg2 > 1) {
+                loadFactor = Double.parseDouble(args[1]);
+                if (loadFactor < 0 || loadFactor > 1) {
                     printUsage();
                     System.exit(-1);
                 }
-                arg3 = Integer.parseInt(args[2]);
-                if (arg3 < 0 || arg3 > 2) {
+                debugLevel = Integer.parseInt(args[2]);
+                if (debugLevel < 0 || debugLevel > 2) {
                     printUsage();
                     System.exit(-1);
                 }
@@ -62,27 +64,33 @@ public class HashtableTest {
             }
         }
 
-        //Find twin prime within range specified on assignment PDF if debug level is 0 or 1
-        if (arg3 == 0 || arg3 == 1) {
+        //Print twin prime within range specified on assignment PDF if debug level is 0 or 1
+        if (debugLevel == 0 || debugLevel == 1) {
             System.out.println("HashtableTest: Twin prime table size found in the range [95500..96000]: " + twinPrime);
         }
 
         //If input type is 1 - Random Numbers
-        if (arg1 == 1) {
+        if (inputType == 1) {
+            if (debugLevel == 0 || debugLevel == 1) {
+                System.out.println("HashtableTest: Data source type --> random numbers");
+            }
             random = new Random();
             LinearProbing<Integer> linearProbe = new LinearProbing<Integer>(twinPrime);
             DoubleHashing<Integer> doubleHash = new DoubleHashing<Integer>(twinPrime);
-            while (linearProbe.getLoadFactor() < arg2 && doubleHash.getLoadFactor() < arg2) {
+            while (linearProbe.getLoadFactor() < loadFactor && doubleHash.getLoadFactor() < loadFactor) {
                 linearProbe.hashInsert(random.nextInt());
                 doubleHash.hashInsert(random.nextInt());
             }
         }
 
         //If input type is 2 - System Time
-        else if (arg1 == 2) {
+        else if (inputType == 2) {
+            if (debugLevel == 0 || debugLevel == 1) {
+                System.out.println("HashtableTest: Data source type --> system time");
+            }
             LinearProbing<Long> linearProbe = new LinearProbing<Long>(twinPrime);
             DoubleHashing<Long> doubleHash = new DoubleHashing<Long>(twinPrime);
-            while (linearProbe.getLoadFactor() < arg2 && doubleHash.getLoadFactor() < arg2) {
+            while (linearProbe.getLoadFactor() < loadFactor && doubleHash.getLoadFactor() < loadFactor) {
                 long currentTime = System.currentTimeMillis();
                 linearProbe.hashInsert(currentTime);
                 doubleHash.hashInsert(currentTime);
@@ -90,13 +98,16 @@ public class HashtableTest {
         }
 
         //If input type is 3 - Word List
-        else if (arg1 == 3) {
+        else if (inputType == 3) {
+            if (debugLevel == 0 || debugLevel == 1) {
+                System.out.println("HashtableTest: Data source type --> word-list");
+            }
             try {
                 String nextLine;
                 fileScan = new Scanner(new File("word-list"));
                 LinearProbing<String> linearProbe = new LinearProbing<String>(twinPrime);
                 DoubleHashing<String> doubleHash = new DoubleHashing<String>(twinPrime);
-                while (linearProbe.getLoadFactor() < arg2 && doubleHash.getLoadFactor() < arg2) {
+                while (linearProbe.getLoadFactor() < loadFactor && doubleHash.getLoadFactor() < loadFactor) {
                     nextLine = fileScan.nextLine();
                     linearProbe.hashInsert(nextLine);
                     doubleHash.hashInsert(nextLine);

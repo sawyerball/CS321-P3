@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Further Progress">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Added More to HashtableTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashtableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashtableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashtableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +83,7 @@
       <workItem from="1635795320521" duration="6333000" />
       <workItem from="1635885965322" duration="5000" />
       <workItem from="1635886302590" duration="2707000" />
+      <workItem from="1636064227707" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -136,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635978951391</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added More to HashtableTest">
+      <created>1635989507115</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1635989507115</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +167,7 @@
     <MESSAGE value="Added TwinPrimeGenerator class - NEEDS ATTENTION" />
     <MESSAGE value="HashFunctions and Tests" />
     <MESSAGE value="Further Progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Further Progress" />
+    <MESSAGE value="Added More to HashtableTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added More to HashtableTest" />
   </component>
 </project>
