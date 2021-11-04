@@ -10,9 +10,9 @@ public class HashObject<T> {
     /*
      *
      */
-    public HashObject(T passedInKey, int passedInFrequency, int passedInProbeCount) {
+    public HashObject(T passedInKey, int passedInProbeCount) {
         key = passedInKey; //hashCode()?
-        frequencyCount = passedInFrequency;
+        frequencyCount = 0;
         probeCount = passedInProbeCount;
     }
 

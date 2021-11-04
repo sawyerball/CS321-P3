@@ -1,8 +1,6 @@
 public class DoubleHashing<T> extends HashTable<T>{
 
     int alpha;
-//    int h1 = positiveMod(key.hashCode(), tableSize);
-//    int h2 = 1 + positiveMod(key.hashCode(), tableSize - 2);
     public DoubleHashing(int size) {
         super(size);
     }

@@ -14,13 +14,13 @@ public abstract class HashTable<T> {
     /*
      *
      */
-    public int HashInsert(T key) {
+    public int hashInsert(T key) {
         int i = 0;
         int j = 0;
         while (i != tableSize) {
             j = hashFunction(key, i);
-            if (Table[j] == null) { // || DELETED) {
-                Table[j] = (HashObject<T>) key;
+            if (Table[j] == null) {
+                Table[j] = new HashObject<T>(key, i) ;
                 tablePopulation++;
                 return i;
             }
