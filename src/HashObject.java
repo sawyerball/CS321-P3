@@ -40,4 +40,15 @@ public class HashObject<T> {
         return key;
     }
 
+    public int getFrequency() {
+        return frequencyCount;
+    }
+
+    public int getProbes() {
+        return probeCount;
+    }
+
+    public void increaseFrequency(){
+        frequencyCount++;
+    }
 }

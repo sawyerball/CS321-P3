@@ -89,8 +89,8 @@ public class HashtableTest {
                 numLinearElements++;
             }
             if (debugLevel == 0 || debugLevel == 1) {
-                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + 1 + " duplicates");
-                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + "");
+                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + linearProbe.getDupes() + " duplicates");
+                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + linearProbe.averageProbeCount());
             }
 
             numDoubleElements = 0;
@@ -102,8 +102,8 @@ public class HashtableTest {
                 numDoubleElements++;
             }
             if (debugLevel == 0 || debugLevel == 1) {
-                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + 1 + " duplicates");
-                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + "");
+                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
+                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
             }
         }
 
