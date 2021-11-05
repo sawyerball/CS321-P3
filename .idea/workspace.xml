@@ -39,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.HashTableTest">
+  <component name="RunManager" selected="Application.HashtableTest">
     <configuration name="HashObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashObject" />
       <module name="P3" />
@@ -51,6 +51,14 @@
       <option name="MAIN_CLASS_NAME" value="HashTableTest" />
       <module name="P3" />
       <option name="PROGRAM_PARAMETERS" value="1 1 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashtableTest" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HashtableTest" />
+      <module name="P3" />
+      <option name="PROGRAM_PARAMETERS" value="3 .5 1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,7 +91,7 @@
       <workItem from="1635795320521" duration="6333000" />
       <workItem from="1635885965322" duration="5000" />
       <workItem from="1635886302590" duration="2707000" />
-      <workItem from="1636064227707" duration="631000" />
+      <workItem from="1636064227707" duration="2848000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -141,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635989507115</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added More to HashtableTest">
+      <created>1636065313086</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636065313087</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
