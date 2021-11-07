@@ -15,6 +15,10 @@ public class HashtableTest {
         int numDoubleElements;
         int numLinearDuplicates;
         int numDoubleDuplicates;
+
+        double currentLoadFactor = 0; //debugging purposes
+
+
         Random random;
         Scanner fileScan;
         TwinPrimeGenerator twinPrimeGen = new TwinPrimeGenerator();
@@ -84,9 +88,12 @@ public class HashtableTest {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("\nHashtableTest: Using Linear Hashing....");
             }
-            while (linearProbe.getLoadFactor() < loadFactor) {
+
+            currentLoadFactor = linearProbe.getLoadFactor();
+            while (currentLoadFactor < loadFactor) {
                 linearProbe.hashInsert(random.nextInt());
                 numLinearElements++;
+                currentLoadFactor = linearProbe.getLoadFactor();
             }
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + linearProbe.getDupes() + " duplicates");
@@ -102,26 +109,39 @@ public class HashtableTest {
                 numDoubleElements++;
             }
             if (debugLevel == 0 || debugLevel == 1) {
-                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
+                System.out.println("HashtableTest: Input " + numDoubleElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
                 System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
             }
         }
 
-        //If input type is 2 - System Time
+        //If input type is 2 - System Time TODO
         else if (inputType == 2) {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Data source type --> system time");
+                System.out.println("\nHashtableTest: Using Linear Hashing....");
             }
+            numLinearElements = 0;
+            numDoubleElements = 0;
             LinearProbing<Long> linearProbe = new LinearProbing<Long>(twinPrime);
             DoubleHashing<Long> doubleHash = new DoubleHashing<Long>(twinPrime);
             while (linearProbe.getLoadFactor() < loadFactor && doubleHash.getLoadFactor() < loadFactor) {
                 long currentTime = System.currentTimeMillis();
                 linearProbe.hashInsert(currentTime);
+                numLinearElements++;
                 doubleHash.hashInsert(currentTime);
+                numDoubleElements++;
             }
+            if (debugLevel == 0 || debugLevel == 1) {
+                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + linearProbe.getDupes() + " duplicates");
+                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + linearProbe.averageProbeCount());
+                System.out.println("\nHashtableTest: Using Double Hashing....");
+                System.out.println("HashtableTest: Input " + numDoubleElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
+                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
+            }
+
         }
 
-        //If input type is 3 - Word List
+        //If input type is 3 - Word List TODO
         else if (inputType == 3) {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Data source type --> word-list");
@@ -129,6 +149,7 @@ public class HashtableTest {
             try {
                 String nextLine;
                 numLinearElements = 0;
+                numDoubleElements = 0;
                 fileScan = new Scanner(new File("word-list"));
                 LinearProbing<String> linearProbe = new LinearProbing<String>(twinPrime);
                 DoubleHashing<String> doubleHash = new DoubleHashing<String>(twinPrime);
@@ -137,9 +158,16 @@ public class HashtableTest {
                     linearProbe.hashInsert(nextLine);
                     numLinearElements++;
                     doubleHash.hashInsert(nextLine);
+                    numDoubleElements++;
                 }
-                System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + 1 + " duplicates");
-                System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + "");
+                if (debugLevel == 0 || debugLevel == 1) {
+                    System.out.println("\nHashtableTest: Using Linear Hashing....");
+                    System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + linearProbe.getDupes() + " duplicates");
+                    System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + linearProbe.averageProbeCount());
+                    System.out.println("\nHashtableTest: Using Double Hashing....");
+                    System.out.println("HashtableTest: Input " + numDoubleElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
+                    System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
+                }
             }
             catch (FileNotFoundException e) {
                 System.out.println("File not found.");

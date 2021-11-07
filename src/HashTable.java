@@ -26,6 +26,7 @@ public abstract class HashTable<T> {
             }
             else if(Table[j].equals(key)){
                 Table[j].increaseFrequency();
+                return i;
             }
             else {
                 i++;
