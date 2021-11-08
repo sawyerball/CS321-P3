@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Parse Arguments and Add Hash Function Stuff">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Mostly Working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashtableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashtableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinearProbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearProbing.java" afterDir="false" />
@@ -41,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project1" />
   </component>
   <component name="RunManager" selected="Application.HashtableTest">
     <configuration name="HashObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -61,7 +63,7 @@
     <configuration name="HashtableTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashtableTest" />
       <module name="P3" />
-      <option name="PROGRAM_PARAMETERS" value="2 .7 1" />
+      <option name="PROGRAM_PARAMETERS" value="3 .5 1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,7 +97,7 @@
       <workItem from="1635885965322" duration="5000" />
       <workItem from="1635886302590" duration="2707000" />
       <workItem from="1636064227707" duration="631000" />
-      <workItem from="1636303030564" duration="2254000" />
+      <workItem from="1636303030564" duration="7338000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -153,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635989507115</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Mostly Working">
+      <created>1636306389059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636306389059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +189,19 @@
     <MESSAGE value="HashFunctions and Tests" />
     <MESSAGE value="Further Progress" />
     <MESSAGE value="Added More to HashtableTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added More to HashtableTest" />
+    <MESSAGE value="Mostly Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly Working" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="i == 47677" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/HashtableTest.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

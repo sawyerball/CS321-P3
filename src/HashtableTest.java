@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,11 +18,9 @@ public class HashtableTest {
         int numLinearDuplicates;
         int numDoubleDuplicates;
 
-        double currentLoadFactor = 0; //debugging purposes
-
 
         Random random;
-        Scanner fileScan;
+        Scanner fileScan = null;
         TwinPrimeGenerator twinPrimeGen = new TwinPrimeGenerator();
 
         twinPrime = twinPrimeGen.twinPrimeGenerator(95500, 96000);
@@ -89,11 +89,9 @@ public class HashtableTest {
                 System.out.println("\nHashtableTest: Using Linear Hashing....");
             }
 
-            currentLoadFactor = linearProbe.getLoadFactor();
-            while (currentLoadFactor < loadFactor) {
+            while (linearProbe.getLoadFactor() < loadFactor) {
                 linearProbe.hashInsert(random.nextInt());
                 numLinearElements++;
-                currentLoadFactor = linearProbe.getLoadFactor();
             }
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + linearProbe.getDupes() + " duplicates");
@@ -114,7 +112,7 @@ public class HashtableTest {
             }
         }
 
-        //If input type is 2 - System Time TODO
+        //If input type is 2 - System Time TODO: FIX
         else if (inputType == 2) {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Data source type --> system time");
@@ -141,7 +139,7 @@ public class HashtableTest {
 
         }
 
-        //If input type is 3 - Word List TODO
+        //If input type is 3 - Word List
         else if (inputType == 3) {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Data source type --> word-list");
@@ -168,11 +166,24 @@ public class HashtableTest {
                     System.out.println("HashtableTest: Input " + numDoubleElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
                     System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
                 }
+                if (debugLevel == 1) { //linear dump file TODO: MAKE DUMP FILE AND NOT OUTPUT TO CONSOLE
+                    File linearDump = new File("linear-dump.txt");
+                    FileWriter writer = new FileWriter("linear-dump.txt");
+
+                    for (int i = 0; i < linearProbe.tableSize; i++) {
+                        if (linearProbe.Table[i] != null) {
+                            writer.write("table[" + i + "]: " + linearProbe.Table[i].toString() + "\n");
+                        }
+                    }
+                }
             }
             catch (FileNotFoundException e) {
                 System.out.println("File not found.");
                 System.exit(-1);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+            fileScan.close();
         }
 
 

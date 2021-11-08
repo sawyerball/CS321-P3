@@ -3,16 +3,16 @@ public abstract class HashTable<T> {
     int tableSize;
     int tablePopulation = 0;
 
-    /*
-     *
+    /* Constructs a new hash table of the
+        input table size.
      */
     public HashTable(int size) {
         tableSize = size;
         Table = new HashObject[tableSize];
     }
 
-    /*
-     *
+    /* Inserts the hash object into the
+        table.
      */
     public int hashInsert(T key) {
         int i = 0;
@@ -38,15 +38,15 @@ public abstract class HashTable<T> {
     }
 
 
-    /*
-     *
+    /* Returns the current load factor of the
+        table.
      */
     public double getLoadFactor() {
         return ((double)tablePopulation/tableSize);
     }
 
-    /*
-     *
+    /* Positive mod function provided in the
+        assignment PDF.
      */
     protected int positiveMod(int dividend, int divisor) {
         int value = dividend % divisor;
@@ -56,6 +56,9 @@ public abstract class HashTable<T> {
         return value;
     }
 
+    /* Returns the number of duplicate entries
+        in the table.
+     */
     public int getDupes() {
         int totalDupes = 0;
 
@@ -68,6 +71,9 @@ public abstract class HashTable<T> {
         return totalDupes;
     }
 
+    /* Finds and returns the average probe
+        count in the table.
+     */
     public double averageProbeCount() {
         int totalProbes = 0;
 
@@ -80,8 +86,9 @@ public abstract class HashTable<T> {
         return (Table.length/(double)totalProbes);
     }
 
-    /*
-     *
+
+    /* Abstract hash function method to be used
+        in LinearProbing.java and DoubleHashing.java.
      */
     public abstract int hashFunction(T key, int index);
 }

@@ -4,8 +4,8 @@ public class DoubleHashing<T> extends HashTable<T>{
         super(size);
     }
 
-    /*
-     *
+    /* Defines the abstract method in HashTable.java
+        for double hashing.
      */
     @Override
     public int hashFunction(T key, int index) {

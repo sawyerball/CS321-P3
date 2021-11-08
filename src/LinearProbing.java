@@ -4,8 +4,8 @@ public class LinearProbing<T> extends HashTable<T>{
         super(size);
     }
 
-    /*
-     *
+    /* Defines the abstract method in HashTable.java
+        for linear probing.
      */
     @Override
     public int hashFunction(T key, int index) {

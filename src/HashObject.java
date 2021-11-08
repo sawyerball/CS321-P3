@@ -28,9 +28,9 @@ public class HashObject<T> {
      *
      */
     @Override
-    public String toString() {
-
-        return null;
+    public String toString() { //TODO
+        String output = key + " " + frequencyCount + " " + probeCount;
+        return output;
     }
 
     /*
