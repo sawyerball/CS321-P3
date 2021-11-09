@@ -112,7 +112,7 @@ public class HashtableTest {
             }
         }
 
-        //If input type is 2 - System Time TODO: FIX
+        //If input type is 2 - System Time
         else if (inputType == 2) {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Data source type --> system time");
@@ -175,6 +175,7 @@ public class HashtableTest {
                             writer.write("table[" + i + "]: " + linearProbe.Table[i].toString() + "\n");
                         }
                     }
+                    writer.close();
                 }
             }
             catch (FileNotFoundException e) {
