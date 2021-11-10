@@ -1,5 +1,7 @@
 /**
- *
+ * Test class used to test HashObject.java, HashTable.java,
+ * TwinPrimeGenerator.java, LinearProbing.java, and DoubleHashing.java.
+ * @author Sawyer Ball
  */
 
 import java.io.File;
@@ -12,6 +14,10 @@ import java.util.Scanner;
 public class HashtableTest {
 
 
+    /**
+     * Driver method to run classes from.
+     * @param args Arguments for driver class.
+     */
     public static void main(String[] args) {
         int inputType = -1;
         Double loadFactor = -1.0;
