@@ -166,7 +166,8 @@ public class HashtableTest {
                     System.out.println("HashtableTest: Input " + numDoubleElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
                     System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
                 }
-                if (debugLevel == 1) { //linear dump file TODO: MAKE DUMP FILE AND NOT OUTPUT TO CONSOLE
+                if (debugLevel == 1) {
+                    //linear dump file
                     File linearDump = new File("linear-dump.txt");
                     FileWriter writer = new FileWriter("linear-dump.txt");
 
@@ -176,6 +177,15 @@ public class HashtableTest {
                         }
                     }
                     writer.close();
+
+//                    File doubleDump = new File("double-dump.txt");
+//                    FileWriter writer2 = new FileWriter(doubleDump);
+//                    for (int i = 0; i < doubleHash.tableSize; i++) {
+//                        if (doubleHash.Table[i] != null) {
+//                            writer2.write("table[" + i + "]: " + doubleHash.Table[i].toString() + "\n");
+//                        }
+//                    }
+//                    writer2.close();
                 }
             }
             catch (FileNotFoundException e) {
