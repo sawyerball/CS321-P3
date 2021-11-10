@@ -169,7 +169,7 @@ public class HashtableTest {
                 if (debugLevel == 1) {
                     //linear dump file
                     File linearDump = new File("linear-dump.txt");
-                    FileWriter writer = new FileWriter("linear-dump.txt");
+                    FileWriter writer = new FileWriter(linearDump);
 
                     for (int i = 0; i < linearProbe.tableSize; i++) {
                         if (linearProbe.Table[i] != null) {
@@ -178,14 +178,14 @@ public class HashtableTest {
                     }
                     writer.close();
 
-//                    File doubleDump = new File("double-dump.txt");
-//                    FileWriter writer2 = new FileWriter(doubleDump);
-//                    for (int i = 0; i < doubleHash.tableSize; i++) {
-//                        if (doubleHash.Table[i] != null) {
-//                            writer2.write("table[" + i + "]: " + doubleHash.Table[i].toString() + "\n");
-//                        }
-//                    }
-//                    writer2.close();
+                    File doubleDump = new File("double-dump.txt");
+                    FileWriter writer2 = new FileWriter(doubleDump);
+                    for (int i = 0; i < doubleHash.tableSize; i++) {
+                        if (doubleHash.Table[i] != null) {
+                            writer2.write("table[" + i + "]: " + doubleHash.Table[i].toString() + "\n");
+                        }
+                    }
+                    writer2.close();
                 }
             }
             catch (FileNotFoundException e) {
