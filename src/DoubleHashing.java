@@ -9,8 +9,8 @@ public class DoubleHashing<T> extends HashTable<T>{
      */
     @Override
     public int hashFunction(T key, int index) {
-        int h1 = positiveMod(key.hashCode(), tableSize);
-        int h2 = 1 + positiveMod(key.hashCode(), tableSize - 2);
-        return (h1 + index + h2) % tableSize;
+        int h1 = positiveMod(key.hashCode(), Table.length);
+        int h2 = 1 + positiveMod(key.hashCode(), Table.length - 2);
+        return positiveMod(h1 + index * h2, Table.length);
     }
 }

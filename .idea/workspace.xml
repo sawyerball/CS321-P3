@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Fixed Dump File">
+    <list default="true" id="1c62aa57-8fd7-4555-a570-aeff0ca5d5e3" name="Changes" comment="Issue with DoubleHash Average Probe Count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoubleHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleHashing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
@@ -100,7 +100,8 @@
       <workItem from="1636425369553" duration="135000" />
       <workItem from="1636426741539" duration="855000" />
       <workItem from="1636492698138" duration="2364000" />
-      <workItem from="1636514905400" duration="7728000" />
+      <workItem from="1636514905400" duration="7781000" />
+      <workItem from="1636563474694" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="Test Line">
       <created>1635537383008</created>
@@ -172,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636351868699</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Issue with DoubleHash Average Probe Count">
+      <created>1636526783219</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636526783219</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +209,7 @@
     <MESSAGE value="Added More to HashtableTest" />
     <MESSAGE value="Mostly Working" />
     <MESSAGE value="Issues with dump file and average probe count" />
-    <option name="LAST_COMMIT_MESSAGE" value="Issues with dump file and average probe count" />
+    <MESSAGE value="Issue with DoubleHash Average Probe Count" />
+    <option name="LAST_COMMIT_MESSAGE" value="Issue with DoubleHash Average Probe Count" />
   </component>
 </project>

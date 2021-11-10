@@ -1,3 +1,7 @@
+/**
+ *
+ * @param <T>
+ */
 public abstract class HashTable<T> {
     HashObject<T>[] Table;
     int tableSize;
@@ -5,6 +9,11 @@ public abstract class HashTable<T> {
 
     /* Constructs a new hash table of the
         input table size.
+     */
+
+    /**
+     *
+     * @param size
      */
     public HashTable(int size) {
         tableSize = size;
@@ -14,9 +23,15 @@ public abstract class HashTable<T> {
     /* Inserts the hash object into the
         table.
      */
+
+    /**
+     *
+     * @param key
+     * @return
+     */
     public int hashInsert(T key) {
         int i = 0;
-        int j = 0;
+        int j;
         while (i != tableSize) {
             j = hashFunction(key, i);
             if (Table[j] == null) {
