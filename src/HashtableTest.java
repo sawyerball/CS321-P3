@@ -13,10 +13,8 @@ public class HashtableTest {
         Double loadFactor = -1.0;
         int debugLevel = 0;     //default to 0
         int twinPrime;
-        int numLinearElements;
-        int numDoubleElements;
-        int numLinearDuplicates;
-        int numDoubleDuplicates;
+        long numLinearElements;
+        long numDoubleElements;
 
 
         Random random;
@@ -178,6 +176,7 @@ public class HashtableTest {
                     }
                     writer.close();
 
+                    //double dump file
                     File doubleDump = new File("double-dump.txt");
                     FileWriter writer2 = new FileWriter(doubleDump);
                     for (int i = 0; i < doubleHash.tableSize; i++) {

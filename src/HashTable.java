@@ -59,8 +59,8 @@ public abstract class HashTable<T> {
     /* Returns the number of duplicate entries
         in the table.
      */
-    public int getDupes() {
-        int totalDupes = 0;
+    public long getDupes() {
+        long totalDupes = 0;
 
         for (int i = 0; i < Table.length; i++) {
             if (Table[i] != null) {
@@ -82,8 +82,7 @@ public abstract class HashTable<T> {
                 totalProbes += Table[i].getProbes();
             }
         }
-
-        return (Table.length/(double)totalProbes);
+        return ((double)totalProbes/tablePopulation);
     }
 
 
