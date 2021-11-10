@@ -26,7 +26,6 @@ public class HashtableTest {
         long numLinearElements;
         long numDoubleElements;
 
-
         Random random;
         Scanner fileScan = null;
         TwinPrimeGenerator twinPrimeGen = new TwinPrimeGenerator();
@@ -40,10 +39,8 @@ public class HashtableTest {
         }
 
         //Parse through arguments and make sure the arguments are valid
-
         //If arguments don't specify debugLevel
         if (args.length == 2) {
-
             try {
                 inputType = Integer.parseInt(args[0]);
                 loadFactor = Double.parseDouble(args[1]);
@@ -83,12 +80,16 @@ public class HashtableTest {
         if (debugLevel == 0 || debugLevel == 1) {
             System.out.println("HashtableTest: Twin prime table size found in the range [95500..96000]: " + twinPrime);
         }
+        if (debugLevel == 2) {
+            System.out.println("HashtableTest: Debug level 2 - Print every 100 objects");
+        }
 
         //If input type is 1 - Random Numbers
         if (inputType == 1) {
             if (debugLevel == 0 || debugLevel == 1) {
                 System.out.println("HashtableTest: Data source type --> random numbers");
             }
+
             random = new Random();
             LinearProbing<Integer> linearProbe = new LinearProbing<>(twinPrime);
             numLinearElements = 0;
@@ -118,6 +119,23 @@ public class HashtableTest {
                 System.out.println("HashtableTest: Input " + numDoubleElements + " elements, of which " + doubleHash.getDupes() + " duplicates");
                 System.out.println("HashtableTest: load factor = " + loadFactor + ", Avg. no. of probes " + doubleHash.averageProbeCount());
             }
+
+            if (debugLevel == 2) {
+                for (int i = 0; i < linearProbe.Table.length; i++) {
+                    if (linearProbe.Table[i] != null) {
+                        if (i % 100 == 0) {
+                            System.out.println("table[" + i + "]: " + linearProbe.Table[i].toString());
+                        }
+                    }
+                }
+                for (int j = 0; j < doubleHash.Table.length; j++) {
+                    if (doubleHash.Table[j] != null) {
+                        if (j % 100 == 0) {
+                            System.out.println("table[" + j + "]: " + doubleHash.Table[j].toString());
+                        }
+                    }
+                }
+            }
         }
 
         //If input type is 2 - System Time
@@ -139,6 +157,23 @@ public class HashtableTest {
             }
             if (debugLevel == 0 || debugLevel == 1) {
                 printResults(numLinearElements, numDoubleElements, loadFactor, linearProbe, doubleHash);
+            }
+
+            if (debugLevel == 2) {
+                for (int i = 0; i < linearProbe.Table.length; i++) {
+                    if (linearProbe.Table[i] != null) {
+                        if (i % 100 == 0) {
+                            System.out.println("table[" + i + "]: " + linearProbe.Table[i].toString());
+                        }
+                    }
+                }
+                for (int j = 0; j < doubleHash.Table.length; j++) {
+                    if (doubleHash.Table[j] != null) {
+                        if (j % 100 == 0) {
+                            System.out.println("table[" + j + "]: " + doubleHash.Table[j].toString());
+                        }
+                    }
+                }
             }
 
         }
@@ -187,6 +222,22 @@ public class HashtableTest {
                     }
                     writer2.close();
                 }
+                if (debugLevel == 2) {
+                    for (int i = 0; i < linearProbe.Table.length; i++) {
+                        if (linearProbe.Table[i] != null) {
+                            if (i % 100 == 0) {
+                                System.out.println("table[" + i + "]: " + linearProbe.Table[i].toString());
+                            }
+                        }
+                    }
+                    for (int j = 0; j < doubleHash.Table.length; j++) {
+                        if (doubleHash.Table[j] != null) {
+                            if (j % 100 == 0) {
+                                System.out.println("table[" + j + "]: " + doubleHash.Table[j].toString());
+                            }
+                        }
+                    }
+                }
             }
             catch (FileNotFoundException e) {
                 System.out.println("File not found.");
@@ -200,7 +251,10 @@ public class HashtableTest {
 
     }
 
-
+    /**
+     * Prints the usage of the program for when an error
+     * occurs with arguments.
+     */
     private static void printUsage() {
         System.out.println("Input type, load factor, and debug level must be numbers.\n");
         System.out.println("Usage: java HashtableTest <input type> <load factor> [<debug level>]\n"
@@ -210,6 +264,15 @@ public class HashtableTest {
                 + "\tdebug = 2 ==> print debugging output for each insert\n");
     }
 
+    /**
+     * Prints the results of the test. It prints number of elements, number of duplicates,
+     * the load factor, and average probe count for both hash tables.
+     * @param numLinearElements Number of elements in linear hash table
+     * @param numDoubleElements Number of elements in double hash table
+     * @param loadFactor Load factor passed in
+     * @param linearProbe Linear probing hash table
+     * @param doubleHash Double hashing hash table
+     */
     private static void printResults(long numLinearElements, long numDoubleElements, double loadFactor, HashTable linearProbe, HashTable doubleHash) {
         System.out.println("\nHashtableTest: Using Linear Hashing....");
         System.out.println("HashtableTest: Input " + numLinearElements + " elements, of which " + linearProbe.getDupes() + " duplicates");
