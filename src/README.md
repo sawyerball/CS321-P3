@@ -39,6 +39,50 @@ Input type must be either 1 for random numbers, 2 for system time, or
 debug level must be 0 to print to console, 1 to print to console and 
 print a dump file, or 2 to print every 100 entries to console.
 
+## Results
+
+Input source 1: random number
+
+alpha   linear    double
+-----------------------------
+0.5      1.500     1.385
+0.6      1.747     1.521
+0.7      2.167     1.719
+0.8      2.948     2.011
+0.9      5.343     2.565
+0.95    10.703     3.131
+0.98    23.444     3.976
+0.99    50.594     4.672
+
+
+Input source 2: current time
+
+alpha        linear    double
+-----------------------------
+0.5          1.0       1.0
+0.6          1.0       1.0
+0.7          1.0       1.0
+0.8          1.0       1.0
+0.9          1.0       1.0
+0.95         1.0       1.0
+0.98         1.0       1.0
+0.99         1.0       1.0
+
+
+Input source 3: word-list
+
+alpha   linear    double
+-----------------------------
+0.5      1.597     1.390
+0.6      2.149     1.534
+0.7      3.604     1.721
+0.8      6.708     2.016
+0.9     19.815     2.569
+0.95   110.594     3.186
+0.98   324.206     4.020
+0.99   471.671     4.696
+
+
 ## Sources used
 
 The only sources used for this program were from class notes or
